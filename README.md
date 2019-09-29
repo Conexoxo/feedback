@@ -1,7 +1,7 @@
 # Plataforma para realizar feedback a profesores
 ICF244 Arquitectura de Sistemas - Tarea 1: Comunidad UNAB
 
-[Demo en Heroku >>](https://trello.com/b/BP7z3o5H/grupo9registro-de-accionistas)
+[Demo en Heroku >>]()
 
 * Usuario de prueba: alumno
 * Clave de prueba: alumno123
@@ -19,6 +19,7 @@ Docker:
 sudo apt install docker-compose
 ```
 [Docker install](https://docs.docker.com/install/)
+
 [Docker-compose install](https://docs.docker.com/compose/install/)
 
 ## Known Issues

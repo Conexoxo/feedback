@@ -13,7 +13,17 @@ Rails:
   sudo apt install curl
   \curl -sSL https://get.rvm.io | bash
   \curl -sSL https://get.rvm.io | bash -s stable --rails
+  rails --v
 ```
+
+Yarn:
+```yarn
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install yarn
+yarn --v
+```
+
 Docker:
 ```Docker
 sudo apt install docker-compose

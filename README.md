@@ -18,9 +18,9 @@ Docker:
 ```Docker
 sudo apt install docker-compose
 ```
-[Docker install](https://docs.docker.com/install/)
+[Docker installation](https://docs.docker.com/install/)
 
-[Docker-compose install](https://docs.docker.com/compose/install/)
+[Docker-compose installation](https://docs.docker.com/compose/install/)
 
 ## Known Issues
 To fix "Error installing pg: ERROR: Failed to build gem native extension."

@@ -31,8 +31,34 @@ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libread
 ```
 
 ## Usage
+To use:
+```Docker
+docker-compose build
+docker-compose up
+docker-compose run web rails db:create
+docker-compose run web rails db:seed
+docker-compose run web rails db:migrate
+```
+
+Open rails console:
+```Docker
+docker-compose run web rails c
+```
+
+Reset db:
+```Docker
+docker-compose run web rails db:drop
+```
+
+To initialize docker apps:
 ```Docker
 docker-compose run web rails new . --force --no-deps --database=postgresql
+```
+
+Now when you modify Gemfile, you have to sync changes in Gemfile.lock using:
+```Docker
+docker-compose run web bundle install
+docker-compose up --build
 ```
 
 ## Authors

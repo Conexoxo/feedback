@@ -34,10 +34,10 @@ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libread
 To use:
 ```Docker
 docker-compose build
-docker-compose up
 docker-compose run web rails db:create
 docker-compose run web rails db:seed
 docker-compose run web rails db:migrate
+docker-compose up
 ```
 
 Open rails console:

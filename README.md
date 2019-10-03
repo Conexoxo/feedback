@@ -1,67 +1,24 @@
-# Plataforma para realizar feedback a profesores
-ICF244 Arquitectura de Sistemas - Tarea 1: Comunidad UNAB
+# README
 
-[Demo en Heroku >>](https://feedback-qa.herokuapp.com/)
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-* Usuario de prueba: alumno
-* Clave de prueba: alumno123
+Things you may want to cover:
 
-## Installation
-Rails:
-```Rails
-  gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-  sudo apt install curl
-  \curl -sSL https://get.rvm.io | bash
-  \curl -sSL https://get.rvm.io | bash -s stable --rails
-  rails --v
-```
+* Ruby version
 
-Docker:
-```Docker
-sudo apt install docker-compose
-```
-[Docker installation](https://docs.docker.com/install/)
+* System dependencies
 
-[Docker-compose installation](https://docs.docker.com/compose/install/)
+* Configuration
 
-## Known Issues
-To fix "Error installing pg: ERROR: Failed to build gem native extension."
-```Fix
-sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev postgresql-client-common postgresql-client libpq-dev
-```
+* Database creation
 
-## Usage
-To use:
-```Docker
-docker-compose build
-docker-compose run web rails db:create
-docker-compose run web rails db:seed
-docker-compose run web rails db:migrate
-docker-compose up
-```
+* Database initialization
 
-Open rails console:
-```Docker
-docker-compose run web rails c
-```
+* How to run the test suite
 
-Reset db:
-```Docker
-docker-compose run web rails db:drop
-```
+* Services (job queues, cache servers, search engines, etc.)
 
-To initialize docker apps:
-```Docker
-docker-compose run web rails new . --force --no-deps --database=postgresql
-```
+* Deployment instructions
 
-Now when you modify Gemfile, you have to sync changes in Gemfile.lock using:
-```Docker
-docker-compose run web bundle install
-docker-compose up --build
-```
-
-## Authors
-* **Pedro Conejera** - *2019* - [PedroConejera](https://github.com/PedroConejera)
-* **Gonzalo Manquilef** - *2019* - [GonzaloManquilef](https://github.com/GonzaloManquilef)
-* **Luciano Huenuvil** - *2019* - [LucianoHuenuvil](https://github.com/lucianohuenuvil)
+* ...

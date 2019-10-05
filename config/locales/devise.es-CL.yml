@@ -61,5 +61,10 @@ es-CL:
       not_found: "no se encontró."
       not_locked: "no estaba bloqueado."
       not_saved:
+<<<<<<< HEAD
         one: "Un error impidió guardar %{resource}:"
         other: "Existen %{count} errores que impiden registrar %{resource}:"
+=======
+        one: "1 error impidió que este %{resource} fuese guardado:"
+        other: "%{count} errores impidieron que este %{resource} fuese guardado:"
+>>>>>>> Fix environments

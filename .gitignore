@@ -74,6 +74,15 @@ yarn-debug.log*
 # Ignore master key for decrypting credentials and more.
 #/config/master.key
 
+# Visual Studio Code # 
+.vscode/*
+.vscode/
+!.vscode/settings.json 
+!.vscode/tasks.json 
+!.vscode/launch.json 
+!.vscode/extensions.json 
+.history
+
 /public/packs
 /public/packs-test
 /node_modules

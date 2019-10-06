@@ -179,12 +179,17 @@ GEM
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
 <<<<<<< HEAD
+<<<<<<< HEAD
     rails-html-sanitizer (1.3.0)
       loofah (~> 2.3)
 =======
     rails-html-sanitizer (1.2.0)
       loofah (~> 2.2, >= 2.2.2)
 >>>>>>> Fix bundle version
+=======
+    rails-html-sanitizer (1.3.0)
+      loofah (~> 2.3)
+>>>>>>> Fix development
     railties (6.0.0)
       actionpack (= 6.0.0)
       activesupport (= 6.0.0)

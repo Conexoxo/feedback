@@ -3,9 +3,11 @@ FROM ruby:2.6.5
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 RUN mkdir /feedback
 WORKDIR /feedback
+ENV GEM_HOME="/usr/local/bundle"
+ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 COPY Gemfile /feedback/Gemfile
 COPY Gemfile.lock /feedback/Gemfile.lock
-RUN bundle install
+RUN bundle install && bundle --version
 COPY . /feedback
 
 # Add a script to be executed every time the container starts.

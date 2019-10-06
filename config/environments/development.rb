@@ -51,7 +51,7 @@ Rails.application.configure do
   config.assets.debug = true
 
   config.assets.compile = true
-
+  config.serve_static_assets = false
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 

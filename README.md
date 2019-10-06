@@ -6,8 +6,8 @@ ICF244 Arquitectura de Sistemas - Tarea 1: Comunidad UNAB
 * Usuario de prueba: alumno
 * Clave de prueba: alumno123
 
-## Installation
-Rails:
+## Dependencies
+* Rails 6.0.0:
 ```Rails
   gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
   sudo apt install curl
@@ -16,7 +16,18 @@ Rails:
   rails --v
 ```
 
-Docker:
+* Ruby 2.6.5:
+Using rbenv:
+```Ruby
+  rbenv install 2.6.5
+```
+Using RVM:
+```Ruby
+  rvm install ruby-2.6.5
+  rvm use ruby-2.6.5
+```
+
+* Docker:
 ```Docker
 sudo apt install docker-compose
 ```
@@ -28,6 +39,16 @@ sudo apt install docker-compose
 To fix "Error installing pg: ERROR: Failed to build gem native extension."
 ```Fix
 sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev postgresql-client-common postgresql-client libpq-dev
+```
+
+To fix "Webpacker::Manifest::MissingEntryError - Webpacker can't find application in /feedback/public/packs/manifest.json"
+```Fix
+  bundle exec rake assets:precompile
+```
+
+To fix "Cannot start service db: driver failed programming external connectivity on endpoint feedback_db_1 (): Error starting userland proxy: listen tcp 0.0.0.0:5432: bind: address already in use"
+```Fix
+  sudo service postgresql stop
 ```
 
 ## Usage

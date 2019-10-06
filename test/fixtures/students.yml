@@ -6,6 +6,7 @@ one:
   apellido_paterno: MyString
   apellido_materno: MyString
   edad: 1
+  email: MyString
 
 two:
   run: MyString
@@ -13,3 +14,4 @@ two:
   apellido_paterno: MyString
   apellido_materno: MyString
   edad: 1
+  email: MyString

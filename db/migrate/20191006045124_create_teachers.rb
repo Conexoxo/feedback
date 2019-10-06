@@ -6,6 +6,7 @@ class CreateTeachers < ActiveRecord::Migration[6.0]
       t.string :apellido_paterno
       t.string :apellido_materno
       t.integer :edad
+      t.string :email
 
       t.timestamps
     end

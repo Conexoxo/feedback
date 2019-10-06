@@ -11,4 +11,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
-Rails.application.config.assets.precompile += %w( admin.js admin.css creative/manifest.js creative/manifest.css images/* bootstrap/* fonts/* magnific-popup/* morphext/* owlcarousel2/* rs-plugin-5/* stylesheets/* javascripts/*)
+# Rails.application.config.assets.precompile += %w( admin.js admin.css )

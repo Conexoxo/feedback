@@ -17,6 +17,7 @@ ICF244 Arquitectura de Sistemas - Tarea 1: Comunidad UNAB
 ```
 
 * Ruby 2.6.5:
+
 Using rbenv:
 ```Ruby
   rbenv install 2.6.5

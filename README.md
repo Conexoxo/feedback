@@ -1,7 +1,7 @@
 # Plataforma para realizar feedback a profesores
 ICF244 Arquitectura de Sistemas - Tarea 1: Comunidad UNAB
 
-[Demo en Heroku >>](https://feedback-qa.herokuapp.com/)
+[Demo en Heroku >>](https://feedback-produc.herokuapp.com/)
 
 * Alumno de prueba (email/clave): alumno@gatica.exe / alumno
 * Profesor de prueba (email/clave): profesor@gatica.exe / profesor

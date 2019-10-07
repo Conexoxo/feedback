@@ -29,12 +29,12 @@ Using RVM:
 ```
 
 * Docker:
-```Docker
-sudo apt install docker-compose
-```
-[Docker installation](https://docs.docker.com/install/)
-
-[Docker-compose installation](https://docs.docker.com/compose/install/)
+  * ```Docker
+  * sudo apt install docker-compose
+  * ```
+  * [Docker installation](https://docs.docker.com/install/)
+  * 
+  * [Docker-compose installation](https://docs.docker.com/compose/install/)
 
 ## Usage
 To use:

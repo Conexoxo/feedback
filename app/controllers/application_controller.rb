@@ -3,12 +3,12 @@ class ApplicationController < ActionController::Base
 
 	def configure_devise_params
 		devise_parameter_sanitizer.permit(:sign_up) do |teacher|
-			teacher.permit(:nombre,:email,:rut,:apellido_paterno, :apellido_materno, :password, :password_confirmation)
+			teacher.permit(:name, :email, :run, :last_name, :born, :password, :password_confirmation)
 		end
 	end
 	def configure_devise_params
 		devise_parameter_sanitizer.permit(:sign_up) do |student|
-			student.permit(:nombre,:email,:rut,:apellido_paterno, :apellido_materno,:edad, :password, :password_confirmation)
+			student.permit(:name, :email, :run, :last_name, :born, :password, :password_confirmation)
 		end
 	end
 end

@@ -76,6 +76,8 @@ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libread
 2) To fix "Webpacker::Manifest::MissingEntryError - Webpacker can't find application in /feedback/public/packs/manifest.json" and "[Webpacker] Compilation failed: web_1  | /usr/local/bundle/gems/webpacker-4.0.7/lib/webpacker/runner.rb:13:in `': No such file or directory - yarn (Errno::ENOENT) web_1  |     from /usr/local/bundle/gems/webpacker-4.0.7/lib/webpacker runner.rb:13:in" :
 ```Fix
   bundle exec rake assets:precompile
+  docker-compose build
+  docker-compose up
 ```
 
 3) To fix "Cannot start service db: driver failed programming external connectivity on endpoint feedback_db_1 (): Error starting userland proxy: listen tcp 0.0.0.0:5432: bind: address already in use" :

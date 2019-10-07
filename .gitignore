@@ -25,7 +25,7 @@ pickle-email-*.html
 
 # dotenv
 # TODO Comment out this rule if environment variables can be committed
-.env
+#.env
 
 # these should all be checked in to normalize the environment:
 # Gemfile.lock, .ruby-version, .ruby-gemset
@@ -76,7 +76,7 @@ yarn-debug.log*
 
 #/public/packs
 #/public/packs-test
-/node_modules
+#/node_modules
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity

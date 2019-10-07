@@ -18,22 +18,21 @@ ICF244 Arquitectura de Sistemas - Tarea 1: Comunidad UNAB
 
 * Ruby 2.6.5:
 
-Using rbenv:
-```Ruby
-  rbenv install 2.6.5
-```
-Using RVM:
-```Ruby
-  rvm install ruby-2.6.5
-  rvm use ruby-2.6.5
-```
+  * Using rbenv:
+  ```Ruby
+    rbenv install 2.6.5
+  ```
+  * Using RVM:
+  ```Ruby
+    rvm install ruby-2.6.5
+    rvm use ruby-2.6.5
+  ```
 
 * Docker:
-  * ```Docker
-  * sudo apt install docker-compose
-  * ```
+  ```Docker
+    sudo apt install docker-compose
+  ```
   * [Docker installation](https://docs.docker.com/install/)
-  * 
   * [Docker-compose installation](https://docs.docker.com/compose/install/)
 
 ## Usage

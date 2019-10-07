@@ -3,8 +3,8 @@ ICF244 Arquitectura de Sistemas - Tarea 1: Comunidad UNAB
 
 [Demo en Heroku >>](https://feedback-qa.herokuapp.com/)
 
-* Usuario de prueba: alumno
-* Clave de prueba: alumno123
+* Alumno de prueba (email/clave): alumno@gatica.exe / alumno
+* Profesor de prueba (email/clave): profesor@gatica.exe / profesor
 
 ## Dependencies
 * Rails 6.0.0:

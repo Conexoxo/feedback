@@ -10,8 +10,8 @@ ICF244 Arquitectura de Sistemas - Tarea 1: Comunidad UNAB
 * Profesor de prueba: 
   * Email: `profesor@gatica.exe`
   * Contraseña: `profesor`
-## Dependencies 📋🔧
-### Rails 6.0.0:
+## Dependencies 📋
+* Rails 6.0.0:
   ```Rails
     gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
     sudo apt install curl
@@ -40,7 +40,7 @@ ICF244 Arquitectura de Sistemas - Tarea 1: Comunidad UNAB
   * [Docker-compose installation](https://docs.docker.com/compose/install/)
 
 ## Usage 🚀
-> To use:
+>To run rails server:
 ```Docker
 docker-compose build
 docker-compose run web rails db:create
@@ -54,22 +54,18 @@ docker-compose up
 docker-compose run web rails c
 ```
 
->Reset db:
+>Stop containers, networks and drop database:
 ```Docker
 docker-compose run web rails db:drop
+docker-compose stop
+docker-compose down
 ```
 
->To initialize docker apps:
-```Docker
-docker-compose run web rails new . --force --no-deps --database=postgresql
-```
-
->Now when you modify Gemfile, you have to sync changes in Gemfile.lock using:
+>Now when you modify **_Gemfile_**, you have to sync changes in **_Gemfile.lock_** using:
 ```Docker
 docker-compose run web bundle install
 docker-compose up --build
 ```
-
 ## Known Issues 📢
 1) To fix **"Error installing pg: ERROR: Failed to build gem native extension."** :
 ```Fix

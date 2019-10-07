@@ -62,6 +62,8 @@ ActiveRecord::Schema.define(version: 2019_10_07_082041) do
     t.integer "students", array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["course_id"], name: "index_teacher_courses_on_course_id"
+    t.index ["teacher_id"], name: "index_teacher_courses_on_teacher_id"
   end
 
   create_table "users", force: :cascade do |t|

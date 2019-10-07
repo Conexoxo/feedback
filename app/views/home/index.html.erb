@@ -1,4 +1,3 @@
-
 <% if teacher_signed_in? %>
 	<h1>Bienvenido Profesor/a <%= current_teacher.nombre%></h1>
 	<body>
@@ -8,13 +7,13 @@
 			<p>Email: <%= current_teacher.email %></p>
 			<p>Situacion Actual: Docente</p>
 	<%else%>
-	<% if estudiante_signed_in? %>
-		<h1>Bienvenido <%= current_estudiante.nombre%> </h1>
+	<% if student_signed_in? %>
+		<h1>Bienvenido <%= current_student.nombre%> </h1>
 		<body>
 			<h3>Información personal del alumno</h3>
-			<p>Nombre: <%= current_estudiante.nombre%> <%= current_estudiante.apellido_paterno%> <%=current_estudiante.apellido_materno%><p>
-			<p>Rut: <%= current_estudiante.rut %></p>
-			<p>Email: <%= current_estudiante.email %></p>
+			<p>Nombre: <%= current_student.nombre%> <%= current_student.apellido_paterno%> <%=current_student.apellido_materno%><p>
+			<p>Rut: <%= current_student.rut %></p>
+			<p>Email: <%= current_student.email %></p>
 			<p>Situacion Actual: Estudiante</p>
 
 
@@ -23,4 +22,7 @@
 			<p>Si eres un Alumno, registrate o inicia sesión y podras dejar tu calificacion y opinion a los profesores de los ramos que tengas inscritos</p>
 			<p>Si eres un Profesor, registrate o inicia sesión y podras saber tu evaluacion como docente en los ramos dictados</p>
 	<% end %>
-<% end %>
+<% end %> 
+<h1>Bienvenido a la plataforma de feedback</h1>
+<p>Si eres un Alumno, registrate o inicia sesión y podras dejar tu calificacion y opinion a los profesores de los ramos que tengas inscritos</p>
+<p>Si eres un Profesor, registrate o inicia sesión y podras saber tu evaluacion como docente en los ramos dictados</p>

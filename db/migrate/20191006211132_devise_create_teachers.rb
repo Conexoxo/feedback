@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class DeviseCreateTeachers < ActiveRecord::Migration[6.0]
   def change
     create_table :teachers do |t|
@@ -31,14 +29,10 @@ class DeviseCreateTeachers < ActiveRecord::Migration[6.0]
       # t.integer  :failed_attempts, default: 0, null: false # Only if lock strategy is :failed_attempts
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
-            t.string :nombre
-      t.string :apellido_paterno
-      t.string :apellido_materno
-      t.string :rut
-      t.integer :edad
-      t.integer :nrc_curso
-            t.string :rol
-
+      t.string :run
+      t.string :name
+      t.string :last_name
+      t.integer :born
 
       t.timestamps null: false
     end

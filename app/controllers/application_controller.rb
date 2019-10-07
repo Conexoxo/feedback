@@ -7,8 +7,8 @@ class ApplicationController < ActionController::Base
 		end
 	end
 	def configure_devise_params
-		devise_parameter_sanitizer.permit(:sign_up) do |estudiante|
-			estudiante.permit(:nombre,:email,:rut,:apellido_paterno, :apellido_materno,:edad, :password, :password_confirmation)
+		devise_parameter_sanitizer.permit(:sign_up) do |student|
+			student.permit(:nombre,:email,:rut,:apellido_paterno, :apellido_materno,:edad, :password, :password_confirmation)
 		end
 	end
 end

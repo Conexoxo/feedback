@@ -58,7 +58,6 @@ module.exports = function(api) {
         {
           helpers: false,
           regenerator: true,
-          corejs: false
         }
       ],
       [

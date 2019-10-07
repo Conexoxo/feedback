@@ -72,6 +72,7 @@ yarn-debug.log*
 
 # Ignore master key for decrypting credentials and more.
 #/config/master.key
+<<<<<<< HEAD
 
 #/public/packs
 #/public/packs-test
@@ -81,3 +82,11 @@ yarn-debug.log*
 .yarn-integrity
 
 .vscode
+=======
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+>>>>>>> Last compilation

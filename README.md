@@ -42,7 +42,9 @@ To fix "Error installing pg: ERROR: Failed to build gem native extension."
 sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev postgresql-client-common postgresql-client libpq-dev
 ```
 
-To fix "Webpacker::Manifest::MissingEntryError - Webpacker can't find application in /feedback/public/packs/manifest.json"
+To fix "Webpacker::Manifest::MissingEntryError - Webpacker can't find application in /feedback/public/packs/manifest.json" and "[Webpacker] Compilation failed:
+web_1  | /usr/local/bundle/gems/webpacker-4.0.7/lib/webpacker/runner.rb:13:in `': No such file or directory - yarn (Errno::ENOENT)
+web_1  |     from /usr/local/bundle/gems/webpacker-4.0.7/lib/webpacker/runner.rb:13:in"
 ```Fix
   bundle exec rake assets:precompile
 ```

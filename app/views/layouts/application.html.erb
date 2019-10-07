@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FeedbackRails</title>
+    <title>Proyecto</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+
+
+    <ul class="nav justify-content-end">
+      <%- if profesor_signed_in? %>
+        <li class="nav-item">
+          <%= link_to 'Cerrar sesión', destroy_profesor_session_path, method: :delete%>
+          <li class="nav-item">
+              <%= link_to 'Conoce tu evalucación docente'%>
+          <li class="nav-item">
+              <%= link_to 'Blog de comentarios', images_path %>
+        </li>
+        <%else%>
+          <%- if estudiante_signed_in? %>
+             <li class="nav-item">
+               <%= link_to 'Cerrar sesión', destroy_estudiante_session_path, method: :delete%>
+              <li class="nav-item">
+               <%= link_to 'Blog de comentarios'%>
+          </li>
+            <%else%>
+              <li class="nav-item">
+                <%= link_to 'Iniciar sesión Profesor', new_profesor_session_path %>
+              <li class="nav-item">
+                <%= link_to 'Registrar Profesor', new_profesor_registration_path %>
+              <li class="nav-item">
+                <%= link_to 'Iniciar sesión Alumno', new_estudiante_session_path %>
+              <li class="nav-item">
+                <%= link_to 'Registrar Alumno', new_estudiante_registration_path %>
+            </li>
+
+            
+          <% end %>       
+   <% end %>   
+
+    <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>

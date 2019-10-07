@@ -1,26 +1,25 @@
-
 <% if teacher_signed_in? %>
-	<h1>Bienvenido teacher/a <%= current_teacher.nombre%></h1>
+	<h1>Bienvenido Profesor/a <%= current_teacher.name%></h1>
 	<body>
-		<h3>Información personal del teacher</h3>
-		<p>Nombre: <%= current_teacher.nombre%> <%= current_teacher.apellido_paterno%> <%=current_teacher.apellido_materno%><p>
-			<p>Rut: <%= current_teacher.rut %></p>
+		<h3>Información personal del Profesor</h3>
+		<p>Nombre: <%= current_teacher.name%> <%= current_teacher.last_name%><p>
+			<p>Rut: <%= current_teacher.run %></p>
 			<p>Email: <%= current_teacher.email %></p>
+      <p>Edad: <%= current_teacher.born %></p>
 			<p>Situacion Actual: Docente</p>
 	<%else%>
 	<% if student_signed_in? %>
-		<h1>Bienvenido <%= current_student.nombre%> </h1>
+		<h1>Bienvenido <%= current_student.name%> </h1>
 		<body>
 			<h3>Información personal del alumno</h3>
-			<p>Nombre: <%= current_student.nombre%> <%= current_student.apellido_paterno%> <%=current_student.apellido_materno%><p>
-			<p>Rut: <%= current_student.rut %></p>
+			<p>Nombre: <%= current_student.name%> <%= current_student.last_name%><p>
+			<p>Rut: <%= current_student.run %></p>
 			<p>Email: <%= current_student.email %></p>
+      <p>Edad: <%= current_student.born %></p>
 			<p>Situacion Actual: Estudiante</p>
-
-
 		<%else%>
 			<h1>Bienvenido a la plataforma de feedback</h1>
-			<p>Si eres un Alumno, registrate o inicia sesión y podras dejar tu calificacion y opinion a los teacheres de los ramos que tengas inscritos</p>
-			<p>Si eres un teacher, registrate o inicia sesión y podras saber tu evaluacion como docente en los ramos dictados</p>
+			<p>Si eres un Alumno, registrate o inicia sesión y podras dejar tu calificacion y opinion a los profesores de los ramos que tengas inscritos</p>
+			<p>Si eres un Profesor, registrate o inicia sesión y podras saber tu evaluacion como docente en los ramos dictados</p>
 	<% end %>
-<% end %>
+<% end %> 

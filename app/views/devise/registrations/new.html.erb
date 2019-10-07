@@ -1,32 +1,25 @@
 
   
-  <h2>Sign up</h2>
-
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<h2>Sign up</h2>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-
-
   <div class="field">
-    <%= f.label :nombre %><br />
-    <%= f.text_field :nombre, autofocus: true %>
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :apellido_paterno %><br />
-    <%= f.text_field :apellido_paterno, autofocus: true %>
-  </div>
-    <div class="field">
-    <%= f.label :apellido_materno %><br />
-    <%= f.text_field :apellido_materno, autofocus: true %>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true %>
   </div>
 
-    <div class="field">
-    <%= f.label :rut %><br />
-    <%= f.text_field :rut, autofocus: true%>
+  <div class="field">
+    <%= f.label :run %><br />
+    <%= f.text_field :run, autofocus: true%>
   </div>
 
-    <div class="field">
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
@@ -47,8 +40,6 @@
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
-
-
-<%= render "devise/shared/links" %>
-
+  
+  <%= render "devise/shared/links" %>
 <%end%>

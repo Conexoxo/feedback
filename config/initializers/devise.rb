@@ -8,7 +8,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '45af1c8514ac50a583549d2355a0e0eb5509535ae5318caa90ad228a4f184ea6ba0b5d9773a597f2ebf80872da0ed6fe5f32eeb5bbf89f580a3739ba75b9ebe5'
+  # config.secret_key = '4b0305d0c156151a93820f999781a78f0c40e9a2a2cb0308341638c30d3916ad1798eb2cb9d43cc934e8d626ec9d0c4312de6017244d19cd859b686727bb331a'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -103,7 +103,7 @@ Devise.setup do |config|
   # config.reload_routes = true
 
   # ==> Configuration for :database_authenticatable
-  # For bcrypt, this is the cost for hashing the password and defaults to 12. If
+  # For bcrypt, this is the cost for hashing the password and defaults to 11. If
   # using other algorithms, it sets how many times you want the password to be hashed.
   #
   # Limiting the stretches to just one in testing will increase the performance of
@@ -111,10 +111,10 @@ Devise.setup do |config|
   # a value less than 10 in other environments. Note that, for bcrypt (the default
   # algorithm), the cost increases exponentially with the number of stretches (e.g.
   # a value of 20 is already extremely slow: approx. 60 seconds for 1 calculation).
-  config.stretches = Rails.env.test? ? 1 : 12
+  config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '065ddb465404ca9564392ec65cf58de71e1bb60642a4a1c05f76d2f6d9e64264c27e3df6578e675440cce778409b6d636aefb2c74ab8556fff1bd272feca47ba'
+  # config.pepper = '92c146966ea38657e5ca51a9ed428342def7866b4886e67b21b058571952dc8198c89369675508039d75e9f5cf02eb01b0e749ffa4ee1dd877017702267a1913'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false

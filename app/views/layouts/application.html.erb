@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Proyecto</title>
+    <title>FeedbackRails</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
   <body>
 
 
@@ -17,28 +18,26 @@
           <%= link_to 'Cerrar sesión', destroy_teacher_session_path, method: :delete%>
           <li class="nav-item">
               <%= link_to 'Conoce tu evalucación docente'%>
-          <li class="nav-item">
-              <%= link_to 'Blog de comentarios', images_path %>
         </li>
         <%else%>
           <%- if student_signed_in? %>
              <li class="nav-item">
                <%= link_to 'Cerrar sesión', destroy_student_session_path, method: :delete%>
               <li class="nav-item">
-               <%= link_to 'Blog de comentarios'%>
+               <%= link_to 'Ficha de Ramos', images_path %>
           </li>
             <%else%>
               <li class="nav-item">
-                <%= link_to 'Iniciar sesión teacher', new_teacher_session_path %>
+                <%= link_to 'Iniciar sesión Profesor', new_teacher_session_path %>
               <li class="nav-item">
-                <%= link_to 'Registrar teacher', new_teacher_registration_path %>
+                <%= link_to 'Registrar Profesor', new_teacher_registration_path %>
               <li class="nav-item">
                 <%= link_to 'Iniciar sesión Alumno', new_student_session_path %>
               <li class="nav-item">
                 <%= link_to 'Registrar Alumno', new_student_registration_path %>
             </li>
 
-            
+
           <% end %>       
    <% end %>   
 

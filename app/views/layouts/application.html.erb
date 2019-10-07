@@ -12,30 +12,30 @@
 
 
     <ul class="nav justify-content-end">
-      <%- if profesor_signed_in? %>
+      <%- if teacher_signed_in? %>
         <li class="nav-item">
-          <%= link_to 'Cerrar sesión', destroy_profesor_session_path, method: :delete%>
+          <%= link_to 'Cerrar sesión', destroy_teacher_session_path, method: :delete%>
           <li class="nav-item">
               <%= link_to 'Conoce tu evalucación docente'%>
           <li class="nav-item">
               <%= link_to 'Blog de comentarios', images_path %>
         </li>
         <%else%>
-          <%- if estudiante_signed_in? %>
+          <%- if student_signed_in? %>
              <li class="nav-item">
-               <%= link_to 'Cerrar sesión', destroy_estudiante_session_path, method: :delete%>
+               <%= link_to 'Cerrar sesión', destroy_student_session_path, method: :delete%>
               <li class="nav-item">
                <%= link_to 'Blog de comentarios'%>
           </li>
             <%else%>
               <li class="nav-item">
-                <%= link_to 'Iniciar sesión Profesor', new_profesor_session_path %>
+                <%= link_to 'Iniciar sesión teacher', new_teacher_session_path %>
               <li class="nav-item">
-                <%= link_to 'Registrar Profesor', new_profesor_registration_path %>
+                <%= link_to 'Registrar teacher', new_teacher_registration_path %>
               <li class="nav-item">
-                <%= link_to 'Iniciar sesión Alumno', new_estudiante_session_path %>
+                <%= link_to 'Iniciar sesión Alumno', new_student_session_path %>
               <li class="nav-item">
-                <%= link_to 'Registrar Alumno', new_estudiante_registration_path %>
+                <%= link_to 'Registrar Alumno', new_student_registration_path %>
             </li>
 
             

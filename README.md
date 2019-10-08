@@ -87,6 +87,11 @@ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libread
   sudo apt-get install nodejs
 ```
 
+4) To fix **"Could not find a JavaScript runtime. See https://github.com/rails/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)"**
+```Fix
+  sudo apt-get install nodejs
+```
+
 ## Authors ✒️
 * **Pedro Conejera** - *2019* - [PedroConejera](https://github.com/PedroConejera)
 * **Gonzalo Manquilef** - *2019* - [GonzaloManquilef](https://github.com/GonzaloManquilef)

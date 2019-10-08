@@ -6,5 +6,5 @@ class User < ApplicationRecord
 
   has_many :comments, dependent: :destroy
 
-  validates_uniqueness_of :id, :emails
+  validates_uniqueness_of :id, :email
 end

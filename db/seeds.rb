@@ -10,5 +10,10 @@ User.create email:'profesor@gatica.exe', name:'NombreProfesor', last_name:'Prueb
 User.create email:'alumno@gatica.exe', name:'NombreAlumno', last_name:'Prueba', password:'alumno'
 
 10.times do |i|
+	User.create email:"profesor#{i}@gatica.exe", name:'NombreProfesor', last_name:'Prueba', role:'Profesor', password:'profesor'
   Course.create(nrc: 5000+i, name: "Curso #{i}")
+end
+
+50.times do |i|
+	User.create email:"alumno#{i}@gatica.exe", name:'NombreAlumno', last_name:'Prueba', password:'alumno'
 end

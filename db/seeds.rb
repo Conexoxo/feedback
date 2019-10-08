@@ -17,3 +17,10 @@ end
 50.times do |i|
 	User.create email:"alumno#{i}@gatica.exe", name:'NombreAlumno', last_name:'Prueba', password:'alumno'
 end
+
+a=User.find(1)
+a.courses=[1,2,3,4]
+a.save!
+
+a.courses<<5
+a.save!

@@ -1,0 +1,94 @@
+.avispa-logo{
+	height: 5rem;
+	padding-bottom: 7px;
+	padding-top: 7px;
+	max-width: 4rem;
+	margin-left: 1.5rem;
+}
+
+.logo-w{
+	font-weight: 300;
+	margin-top: 1rem;
+	color: #ffffff !important;
+	align-self: center;
+	font-size: 22px;
+}
+
+.logo-o{
+	color: #ffb600 !important;
+	align-self: center;
+	font-size: 22px;
+	margin-right: auto;
+}
+
+.bg-blue{
+  background-color: rgba(20, 36, 179, 0.5) !important;
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
+
+.email-color{
+	color: mediumturquoise !important;
+	&:hover{
+		color: darkorange !important;
+	}
+}
+
+.nav-align{
+	align-self: center;
+	font-size: 17px;
+	margin-right: 1rem;
+}
+
+.inicio{
+	color: white !important;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-link{
+	color: gold;
+	
+	&:hover{
+		text-decoration: none !important;
+		color: darkorange;
+	}
+}
+
+a{
+	color: darkorange;
+
+	&:hover{
+		text-decoration: none !important;
+		color: firebrick;
+	}
+}
+
+.nav-align{
+	position: relative;
+	text-decoration: none;
+	
+	&::after{
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translateX(-50%) scaleX(0);
+		transform-origin: 50% 50%;
+		width: 95%;
+		height: 1px;
+		background-color: rgba(255,255,255,0.8);
+		transition: transform 250ms;
+	}
+	
+	&:hover{	
+		&::after{
+			transform: translateX(-50%) scaleX(1);
+			opacity: 0.7;
+		}
+	}
+}

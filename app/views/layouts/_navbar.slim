@@ -1,0 +1,35 @@
+ul.nav.justify-content-end.bg-blue
+	- if user_signed_in?
+      - unless request.fullpath=='/cursos'
+        li.nav-item.nav-align
+          = link_to 'Mis cursos', courses_path, class: "nav-item nav-link"
+
+      - unless current_user.nil?
+        - if is_student?
+            - unless request.fullpath=='/alumnos'
+              li.nav-item.nav-align
+                = link_to 'Mi perfil', student_path(current_user.set_id), class: "nav-item nav-link"
+            - unless request.fullpath=='/profesores'
+              li.nav-item.nav-align
+                = link_to 'Mis profesores', user_index_path, class: "nav-item nav-link"
+        - else
+            - unless request.fullpath=='/alumnos'
+              li.nav-item.nav-align
+                = link_to 'Mis alumnos', students_path, class: "nav-item nav-link"
+            - unless request.fullpath=='/profesores'
+              li.nav-item.nav-align
+                = link_to 'Mi perfil', user_path(current_user.set_id), class: "nav-item nav-link"
+      li.nav-item.nav-align
+        = link_to 'Salir', destroy_user_session_path, method: :delete, class: "nav-item nav-link"
+	- else
+    - unless request.fullpath=='/'
+      li.nav-item.nav-align
+        = link_to 'Volver al inicio', root_path, class: "nav-item nav-link inicio"
+
+    - unless request.fullpath=='/usuario/ingreso'
+      li.nav-item.nav-align
+        = link_to 'Ingreso', new_user_session_path, class: "nav-item nav-link"
+
+    - unless request.fullpath=='/usuario/registro'
+      li.nav-item.nav-align
+        = link_to 'Registro', new_user_registration_path, class: "nav-item nav-link"

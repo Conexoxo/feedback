@@ -1,0 +1,33 @@
+.mtop{
+	margin-top: 42vh;
+}
+
+.btn-login {
+	margin-top: 3vh;
+	height: 2rem;
+	border-radius: 20px;
+	padding-right: 17px;
+	padding-left: 17px;
+	font-size: 1rem;
+	color: white;
+	background-color: #f4ab1e;
+	opacity: 1;
+	margin-right: auto;
+	margin-left: auto;
+	width: 6rem !important;
+	padding-top: 7px !important;
+}
+
+.btn-login:hover,
+.btn-login:focus {
+	color: black;
+	background-color: #c4860f;
+}
+
+#login {
+	padding-top: 50px
+}
+
+#login .form-group {
+	margin-bottom: 5px;
+}

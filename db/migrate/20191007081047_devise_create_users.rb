@@ -34,7 +34,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
 
       t.string :name
       t.string :last_name
-      t.string :role
+      t.string :role, default: "Alumno"
       t.decimal :rating, array:true
       t.integer :courses, array: true
 

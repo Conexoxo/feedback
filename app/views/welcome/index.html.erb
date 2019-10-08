@@ -1,25 +1,14 @@
-<% if teacher_signed_in? %>
-	<h1>Bienvenido Profesor/a <%= current_teacher.name%></h1>
-	<body>
-		<h3>Información personal del Profesor</h3>
-		<p>Nombre: <%= current_teacher.name%> <%= current_teacher.last_name%><p>
-			<p>Rut: <%= current_teacher.run %></p>
-			<p>Email: <%= current_teacher.email %></p>
-      <p>Edad: <%= current_teacher.born %></p>
-			<p>Situacion Actual: Docente</p>
-	<%else%>
-	<% if student_signed_in? %>
-		<h1>Bienvenido <%= current_student.name%> </h1>
-		<body>
-			<h3>Información personal del alumno</h3>
-			<p>Nombre: <%= current_student.name%> <%= current_student.last_name%><p>
-			<p>Rut: <%= current_student.run %></p>
-			<p>Email: <%= current_student.email %></p>
-      <p>Edad: <%= current_student.born %></p>
-			<p>Situacion Actual: Estudiante</p>
-		<%else%>
-			<h1>Bienvenido a la plataforma de feedback</h1>
-			<p>Si eres un Alumno, registrate o inicia sesión y podras dejar tu calificacion y opinion a los profesores de los ramos que tengas inscritos</p>
-			<p>Si eres un Profesor, registrate o inicia sesión y podras saber tu evaluacion como docente en los ramos dictados</p>
-	<% end %>
-<% end %> 
+<div class='card mt-4'>
+  <div class='row mt-3 pb-3 justify-content-center'>
+    <div class='col-12 card-body ml-4 mr-4'>
+      <% if user_signed_in? %>
+        <h1>Bienvenido <%= current_user.name %></h1>
+        <p>Usted se ha logueado como <%= current_user.role %></p>
+      <%else%>
+        <h1>Bienvenido a la plataforma de feedback</h1>
+        <h5>- Si eres Alumno inicia sesión y podrás dejar tu calificación junto con tú opinión a los profesores de los ramos que tengas inscritos</p>
+        <h5>- Si eres Profesor inicia sesión y podrás ver tu evaluación como docente de los ramos dictados</p>
+      <% end %>
+    </div>
+  </div>
+</div>  

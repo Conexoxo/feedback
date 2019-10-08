@@ -10,7 +10,6 @@ capybara-*.html
 /db/*.sqlite3
 /db/*.sqlite3-journal
 /db/*.sqlite3-[0-9]*
-/public/system
 /coverage/
 /spec/tmp
 *.orig
@@ -25,7 +24,7 @@ config/initializers/secret_token.rb
 
 # dotenv
 # TODO Comment out this rule if environment variables can be committed
-.env
+#.env
 
 # these should all be checked in to normalize the environment:
 # Gemfile.lock, .ruby-version, .ruby-gemset
@@ -45,12 +44,12 @@ bower.json
 .byebug_history
 
 # Ignore node_modules
-node_modules/
+#node_modules/
 
 # Ignore precompiled javascript packs
-/public/packs
-/public/packs-test
-/public/assets
+#/public/packs
+#/public/packs-test
+#/public/assets
 
 # Ignore yarn files
 /yarn-error.log
@@ -74,9 +73,9 @@ yarn-debug.log*
 # Ignore master key for decrypting credentials and more.
 #/config/master.key
 
-/public/packs
-/public/packs-test
-/node_modules
+#/public/packs
+#/public/packs-test
+#/node_modules
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity

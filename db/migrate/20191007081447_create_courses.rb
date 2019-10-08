@@ -3,6 +3,8 @@ class CreateCourses < ActiveRecord::Migration[6.0]
     create_table :courses do |t|
       t.integer :nrc
       t.string :name
+      t.integer :teachers, array: true
+      t.integer :students, array: true
 
       t.timestamps
     end

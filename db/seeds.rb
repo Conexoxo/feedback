@@ -4,4 +4,14 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   Character.create(names: 'Luke', movie: movies.first)
+
+User.create email:'profesor@gatica.exe', run:'12.345.678-0', name:'Profesor', last_name:'Prueba', birth_date:'2009-06-06', password:'profesor'
+User.create email:'alumno@gatica.exe', run:'12.345.678-0', name:'Alumno', last_name:'Prueba', birth_date:'2009-06-06', password:'alumno'
+
+10.times do |i|
+  Course.create(nrc: i, name: "Curso #{i}")
+
+
+
+end

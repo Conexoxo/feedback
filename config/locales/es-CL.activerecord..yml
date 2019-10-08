@@ -1,0 +1,13 @@
+es-CL:
+  activerecord:
+    attributes:
+    models:   
+      user: 
+        one: Usuario
+        other: Usuarios
+      course:
+        one: Curso
+        other: Cursos
+      comment:
+        one: Comentario
+        other: Comentarios

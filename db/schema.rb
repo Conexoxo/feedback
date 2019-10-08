@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 2019_10_07_082041) do
     t.datetime "remember_created_at"
     t.string "name"
     t.string "last_name"
-    t.string "role"
+    t.string "role", default: "Alumno"
     t.decimal "rating", array: true
     t.integer "courses", array: true
     t.datetime "created_at", precision: 6, null: false

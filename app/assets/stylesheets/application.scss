@@ -1,0 +1,189 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap";
+ @import "trix/dist/trix";
+ @import "navbar";
+ @import "devise";
+
+
+body{
+	background-color: #f4ab1e;
+}
+
+.bwhite{
+	background-color: rgba(255,255,255, 0.4) !important;
+}
+
+#bg{
+	min-width: 100vw;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	z-index: -1;
+	left: 0;
+	top: 0;
+	filter: blur(5px);
+	background-image: image-url('fondo-boca.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+select{
+	border-radius: 20px;
+	color: orange;
+	background: white;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom-color: goldenrod;
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+	text-align-last: center;
+	width: 12rem;
+	height: 2rem;
+	font-size: 1rem;
+	
+	&:hover{
+		cursor:pointer;
+		color: darkorange;
+	}
+}
+
+#inspire-sidebar-toggler {
+	color: white;
+	cursor: pointer;
+}
+
+#inspire-sidebar {
+	z-index: 0;
+	position: fixed;
+	width: 200px;
+	height: 100vh;
+	right: -200px;
+}
+
+.center{
+	text-align: center;
+}
+
+label{
+	margin-bottom: 0;
+}
+
+.pad-title{
+	padding-left: 10px !important;
+}
+
+.label-title{
+	padding-left: 2rem !important;
+	margin-top: 1rem !important;
+}
+
+.width-login{
+	width: 12rem !important;
+}
+
+.form-control {
+  width: 20rem;
+  height: 2rem;
+	font-size: 1rem;
+	padding: 0;
+	color: #212121;
+	margin: 0 auto;
+	border-bottom-color: goldenrod !important;
+	border-radius: 0 !important;
+}
+
+.no-border {
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-left-width: 0px;
+	box-shadow: none !important;
+	border-radius: 20px !important;
+}
+
+.btn-danger:hover{
+	color: black;
+}
+
+.btn-secondary:hover{
+	color: black;
+}
+
+.w100{
+	width: 100% !important;
+}
+
+.field{
+	max-width: 100%;
+}
+
+form{
+	max-width: 95%;
+}
+
+.mw-95{
+	max-width: 95% !important;
+}
+
+.btn{
+	height: 38px;
+}
+
+.mg-auto{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.new_comment{
+	max-width: 100% !important;
+}
+
+.new_user{
+	max-width: 100%;
+}
+
+.card-body{
+	padding: 1rem !important;
+}
+
+.displayb{
+	display: block !important;
+}
+
+.btn-warning{
+	color: #ffffff;
+	&:hover{
+		color: #000000;
+	}
+}
+
+.btn-radio{
+	padding: 2rem 1rem 3rem 1rem;
+	border-radius: 20px;
+	background-color: gold;
+	cursor: pointer;
+	display: inline-grid;
+}
+
+.card{
+	border-radius: 0;
+	background-color: rgba(255,255,255, 0.9) !important;
+}

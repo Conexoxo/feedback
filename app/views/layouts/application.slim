@@ -1,0 +1,11 @@
+doctype html
+html lang=I18n.locale 
+  = render 'layouts/head'
+  body
+		= render partial: 'layouts/background'
+		= render partial: 'layouts/navbar'
+
+		.container.mw
+			.row.justify-content-center
+				.col
+					= yield

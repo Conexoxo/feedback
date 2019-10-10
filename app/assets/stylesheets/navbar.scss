@@ -42,6 +42,9 @@
 
 .inicio{
 	color: white !important;
+	&:hover{
+		color: darkgray !important;
+	}
 }
 
 ul {

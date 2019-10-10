@@ -1,28 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<h1 style="color: white;">Courses</h1>
+<% if is_student? %>
+	<h1 class="center" style="color:white !important; margin-top: 2rem;">Cursos inscritos</h1>
+	<h6 class="center" style="color:white !important;">Total: <%= @inscritos_count %></h6>
+<% else %>
+	<h1 class="center" style="color:white !important; margin-top: 2rem;">Cursos impartidos</h1>
+	<h6 class="center" style="color:white !important;">Total: <%= @impartidos_count %></h6>
+<% end %>
 
-<table style="color: white;">
-  <thead>
-    <tr>
-      <th>Nrc</th>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @courses.each do |course| %>
-      <tr>
-        <td><%= course.nrc %></td>
-        <td><%= course.name %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-      </tr>
-    <% end %>
+<table class="table table-dark">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">NRC</th>
+			<th scope="col">Nombre</th>
+			<th scope="col">Inscritos</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @courses.each do |course| %>
+			<tr>
+				<th scope="row"><%= course.id %></th>
+				<td><%= course.nrc %></td>
+				<td><%= course.name %></td>
+				<td><%= course.teachers %></td>
+				<td><%= link_to 'Ver', course, class: "btn btn-primary" %></td>
+        <% unless is_student? %>
+					<td><%= link_to 'Editar curso', edit_course_path(course), class: "btn btn-warning" %></td>
+				<% end %>
+			</tr>
+		<% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Course', new_course_path %>

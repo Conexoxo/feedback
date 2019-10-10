@@ -14,7 +14,6 @@
 			<th scope="col">#</th>
 			<th scope="col">NRC</th>
 			<th scope="col">Nombre</th>
-			<th scope="col">Inscritos</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -23,7 +22,6 @@
 				<th scope="row"><%= course.id %></th>
 				<td><%= course.nrc %></td>
 				<td><%= course.name %></td>
-				<td><%= course.teachers %></td>
 				<td><%= link_to 'Ver', course, class: "btn btn-primary" %></td>
         <% unless is_student? %>
 					<td><%= link_to 'Editar curso', edit_course_path(course), class: "btn btn-warning" %></td>

@@ -1,23 +1,19 @@
 <div class="container mt-3">
-	<h3 class="center" style="color:white !important; margin-top: 2rem;">Mis cursos inscritos</h3>
+	<h1 class="center" style="color:white !important; margin-top: 2rem;">Mis cursos</h1>
 	<h6 class="center" style="color:white !important;">Total: <%= @courses_count %></h6>
 
 	<table class="table table-dark">
 		<thead>
 			<tr>
-				<th scope="col">#</th>
 				<th scope="col">NRC</th>
 				<th scope="col">Nombre</th>
-				<th scope="col">Profesor</th>
 			</tr>
 		</thead>
 		<tbody>
-			<% @courses.each do |course| %>
+			<% @teacher_courses.each do |course| %>
 				<tr>
-					<th scope="row"><%= course.id %></th>
 					<td><%= course.nrc %></td>
 					<td><%= course.name %></td>
-					<td><%= course.teachers %></td>
 				</tr>
 			<% end %>
 		</tbody>

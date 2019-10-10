@@ -7,8 +7,8 @@ body{
 	background-color: #f4ab1e;
 }
 
-.bwhite{
-	background-color: rgba(255,255,255, 0.4) !important;
+.white{
+	color: white;
 }
 
 #bg{
@@ -64,6 +64,7 @@ select{
 
 .center{
 	text-align: center;
+	color: black !important;
 }
 
 label{
@@ -169,4 +170,27 @@ form{
 .card{
 	border-radius: 0;
 	background-color: rgba(255,255,255, 0.9) !important;
+}
+
+td, th {
+	color:white;
+}
+
+.salir{
+	color:red;
+	&:hover{
+		color: darkred;
+	}
+}
+
+.perfil{
+	color: darkturquoise;
+	&:hover{
+		color: darkcyan;
+	}
+}
+
+#notice{
+	color:white; 
+	margin-top: 1rem;
 }

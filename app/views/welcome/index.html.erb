@@ -3,11 +3,11 @@
     <div class='col-12 card-body ml-4 mr-4'>
       <% if user_signed_in? %>
         <h1>Bienvenido <%= current_user.name %></h1>
-        <p>Usted se ha logueado como <%= current_user.role %></p>
+      	<h6>	- Usted se ha logueado como <%= current_user.role %></h6>
       <%else%>
         <h1>Bienvenido a la plataforma de feedback</h1>
-        <h5>- Si eres Alumno inicia sesión y podrás dejar tu calificación junto con tú opinión a los profesores de los ramos que tengas inscritos</p>
-        <h5>- Si eres Profesor inicia sesión y podrás ver tu evaluación como docente de los ramos dictados</p>
+        <h6>	- Si eres Alumno inicia sesión y podrás dejar tu calificación junto con tú opinión a los profesores de los ramos que tengas inscritos</p>
+        <h6>	- Si eres Profesor inicia sesión y podrás ver tu evaluación como docente de los ramos dictados</p>
       <% end %>
     </div>
   </div>

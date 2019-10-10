@@ -2,28 +2,28 @@
 
 .card.mt-4.mb-4
 	.row.justify-content-center.pt-4.mb-3
-		h2 Registro
+		h2.black Registro
 	.row.justify-content-center.pb-4
 		= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
 			= render "devise/shared/error_messages", resource: resource
 
 			.field.center.mb-3
-				= f.label :name
+				= f.label "Nombres"
 				br
-				= f.text_field :name, autocomplete: "name", class:'center form-control no-border'
+				= f.text_field :name, autofocus:true, autocomplete: "name", class:'center form-control no-border'
 
 			.field.center.mb-3
-				= f.label :last_name
+				= f.label "Apellidos"
 				br
 				= f.text_field :last_name, autocomplete: "last_name", class:'center form-control no-border'
 
 			.field.center.mb-3
-				= f.label :email
+				= f.label "Correo electrónico"
 				br
 				= f.email_field :email, autocomplete: "email", class:'center form-control no-border'
 
 			.field.center.mb-3
-				= f.label :password
+				= f.label "Contraseña"
 				- if @minimum_password_length
 					em
 						| (#{@minimum_password_length} caracteres minimo)
@@ -31,7 +31,7 @@
 				= f.password_field :password, autocomplete: "new-password", class:'center form-control no-border'
 
 			.field.center.mb-3
-				= f.label :password_confirmation
+				= f.label "Confirme contraseña"
 				br
 				= f.password_field :password_confirmation, autocomplete: "new-password", class:'center form-control no-border'
 

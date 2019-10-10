@@ -1,21 +1,21 @@
 - content_for :title, "Ingresar"
 
 section#login
-  .container
+  .container.black
     .row.card
       .col-12.justify-content-center.pt-4.mb-3
         h2.mb-4.center Ingresar
         = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
           .field.center.mb-3
-            = f.label :email
-            = f.email_field :email, autofocus: true, class: 'center form-control no-border'
+            = f.label "Correo electrónico"
+            = f.email_field :email, autofocus: true, autocomplete:"email", class: 'center form-control no-border'
           .field.center.mb-3
-            = f.label :password
+            = f.label "Contraseña"
             = f.password_field :password, autocomplete: "current-password", placeholder: 'Contraseña', class: 'center form-control no-border'
           - if devise_mapping.rememberable?
-            .field.center.mb-3
-              = f.check_box :remember_me
-              br
-              = f.label 'Recordarme en este dispositivo', class:'center'
+							.field.center.mb-3
+								= f.check_box :remember_me
+								br
+								= f.label 'Recordarme en este dispositivo', class:'center'
           .actions
             = f.submit 'Ingresar', class: 'btn btn-block btn-login'

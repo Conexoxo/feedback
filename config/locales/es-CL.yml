@@ -6,6 +6,9 @@ es-CL: &base
         restrict_dependent_destroy:
           has_one: No se puede eliminar el registro porque existe un %{record} dependiente
           has_many: No se puede eliminar el registro porque existen %{record} dependientes
+  attributes:
+    email: Correo electrónico
+    password: Contraseña
   date:
     abbr_day_names:
     - dom
@@ -107,7 +110,6 @@ es-CL: &base
       second: Segundos
       year: Año
   errors:
-    format: "%{attribute} %{message}"
     messages:
       accepted: debe ser aceptado
       blank: no puede estar en blanco

@@ -12,7 +12,11 @@ gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+<<<<<<< HEAD
 gem 'webpacker'
+=======
+gem 'webpacker', '~> 4.0'
+>>>>>>> 56d0a17c5bc229ad199dd81940324efeb5a05171
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -23,7 +27,11 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
+<<<<<<< HEAD
 gem 'image_processing', '~> 1.2'
+=======
+# gem 'image_processing', '~> 1.2'
+>>>>>>> 56d0a17c5bc229ad199dd81940324efeb5a05171
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -31,7 +39,10 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+<<<<<<< HEAD
   gem 'pry-rails'
+=======
+>>>>>>> 56d0a17c5bc229ad199dd81940324efeb5a05171
 end
 
 group :development do
@@ -55,6 +66,10 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
+<<<<<<< HEAD
 gem 'bootstrap'
 gem 'lograge'
 gem 'slim-rails'
+=======
+gem 'bootstrap'
+>>>>>>> 56d0a17c5bc229ad199dd81940324efeb5a05171

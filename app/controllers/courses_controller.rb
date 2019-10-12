@@ -4,9 +4,13 @@ class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.json
   def index
+<<<<<<< HEAD
 		@courses = Course.all
 		@inscritos_count = Course.all.count
 		@impartidos_count = Course.all.count
+=======
+    @courses = Course.all
+>>>>>>> 56d0a17c5bc229ad199dd81940324efeb5a05171
   end
 
   # GET /courses/1

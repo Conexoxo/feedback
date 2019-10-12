@@ -15,4 +15,8 @@ services:
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
     ports:
+<<<<<<< HEAD
       - "5432:5432"
+=======
+      - "5432:5432"
+>>>>>>> 56d0a17c5bc229ad199dd81940324efeb5a05171

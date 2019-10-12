@@ -10,6 +10,10 @@ capybara-*.html
 /db/*.sqlite3
 /db/*.sqlite3-journal
 /db/*.sqlite3-[0-9]*
+<<<<<<< HEAD
+=======
+/public/system
+>>>>>>> 56d0a17c5bc229ad199dd81940324efeb5a05171
 /coverage/
 /spec/tmp
 *.orig
@@ -72,6 +76,7 @@ yarn-debug.log*
 
 # Ignore master key for decrypting credentials and more.
 #/config/master.key
+<<<<<<< HEAD
 
 #/public/packs
 #/public/packs-test
@@ -81,3 +86,11 @@ yarn-debug.log*
 .yarn-integrity
 
 .vscode
+=======
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+>>>>>>> 56d0a17c5bc229ad199dd81940324efeb5a05171

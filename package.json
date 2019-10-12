@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "Proyecto",
+=======
+  "name": "myapp",
+>>>>>>> 56d0a17c5bc229ad199dd81940324efeb5a05171
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0-alpha",

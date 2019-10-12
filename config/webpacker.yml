@@ -69,7 +69,10 @@ development:
     disable_host_check: true
     use_local_ip: false
     quiet: false
+<<<<<<< HEAD
     pretty: false
+=======
+>>>>>>> 56d0a17c5bc229ad199dd81940324efeb5a05171
     headers:
       'Access-Control-Allow-Origin': '*'
     watch_options:

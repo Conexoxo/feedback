@@ -23,9 +23,6 @@
 				<td><%= course.nrc %></td>
 				<td><%= course.name %></td>
 				<td><%= link_to 'Ver', course, class: "btn btn-primary" %></td>
-        <% unless is_student? %>
-					<td><%= link_to 'Editar curso', edit_course_path(course), class: "btn btn-warning" %></td>
-				<% end %>
 			</tr>
 		<% end %>
   </tbody>

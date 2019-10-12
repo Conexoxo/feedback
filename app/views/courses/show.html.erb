@@ -1,17 +1,12 @@
-<p id="notice"><%= notice %></p>
+<h1 class="center" style="color:white !important; margin-top: 2rem;"><%= @course.name %></h1>
 
 <p style="color: white;">
-  <strong>Nrc:</strong>
+  <strong>NRC Curso:</strong>
   <%= @course.nrc %>
 </p>
 
-<p style="color: white;">
-  <strong>Name:</strong>
-  <%= @course.name %>
-</p>
-
 <div class="container mt-3 divider updates mb-3">
-  <%= render @course.comments.order("created_at ASC") %>
+  <%= render @course.comments %>
 </div>
 
 <div class="container bg-white mt-3 mb5 divider">

@@ -1,5 +1,7 @@
 <div class="card">
 	<div class="card-body">
+		<h5><%= User.find(comment.user_id).name %></h5>
 		<%= comment.comment %>
+		<small> El <%= User.find(comment.user_id).role %> comentó el <%= comment.created_at.strftime("%m/%d/%Y a las %H:%M") %></small>
 	</div>
 </div>

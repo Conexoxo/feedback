@@ -1,21 +1,17 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_course
-
-  def index
-    @comments = Comment.all
-  end
 
   # POST /comments
   # POST /comments.json
   def create
-    @comment = @course.comments.new(params.require(:comment).permit(:comment, :id))
-
-    if @comment.save
-      @course.save
-      @comment.save
-			redirect_to @course
-    end
+    @comment = @course.comments.new(params.require(:comment).permit(:comment, :id, :user_id))
     
+    Rails.logger.info @comment.inspect
+		if @comment.save
+			@course.save
+    end
+
     redirect_to @course
   end
 

@@ -1,4 +1,5 @@
 <%= form_for([@course, @comment]) do |form| %>
+  <%= form.hidden_field :user_id, value:"#{current_user.id}" %> 
   <div class="field bg-white mt-3">
     <%= form.rich_text_area :comment %>
   </div>

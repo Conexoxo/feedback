@@ -1,21 +1,25 @@
 <div class="container mt-3">
-	<h1 class="center" style="color:white !important; margin-top: 2rem;">Mis cursos inscritos</h1>
-	<h6 class="center" style="color:white !important;">Total: <%= @courses_count %></h6>
+	<h1 class="center" style="color:white !important; margin-top: 2rem;">Mis profesores</h1>
 
 	<table class="table table-dark">
 		<thead>
 			<tr>
-				<th scope="col">#</th>
-				<th scope="col">NRC</th>
 				<th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Email</th>
+				<th scope="col">NRC Impartido</th>
+        <th scope="col">Nombre Curso Impartido</th>
 			</tr>
 		</thead>
 		<tbody>
-			<% @courses.each do |course| %>
+			<% @users.each do |user| %>
 				<tr>
-					<th scope="row"><%= course.id %></th>
-					<td><%= course.nrc %></td>
-					<td><%= course.name %></td>
+					<td><%= user.name %></td>
+					<td><%= user.last_name %></td>
+					<td><%= user.email %></td>
+					<td><%= user.last_name %></td>
+					<td><%= user.last_name %></td>
+          <td><%= link_to 'Ver', user, class: "btn btn-primary" %></td>
 				</tr>
 			<% end %>
 		</tbody>

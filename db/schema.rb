@@ -58,8 +58,8 @@ ActiveRecord::Schema.define(version: 2019_10_07_082041) do
   create_table "courses", force: :cascade do |t|
     t.integer "nrc"
     t.string "name"
-    t.integer "teachers", array: true
-    t.integer "students", array: true
+    t.integer "teachers", default: [], array: true
+    t.integer "students", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -73,8 +73,8 @@ ActiveRecord::Schema.define(version: 2019_10_07_082041) do
     t.string "name"
     t.string "last_name"
     t.string "role", default: "Alumno"
-    t.decimal "rating", array: true
-    t.integer "courses", array: true
+    t.decimal "rating", default: [], array: true
+    t.integer "courses", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true

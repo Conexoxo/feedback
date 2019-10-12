@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :students, only: [:index, :show], path: 'alumnos', controller: :users
 
-  resources :courses, only: [:new, :edit, :index, :show, :update], path:'cursos', path_names: { new: 'crear', edit: 'editar' } do
+  resources :courses, only: [:index, :show], path:'cursos', path_names: { new: 'crear', edit: 'editar' } do
     resources :comments
   end
 

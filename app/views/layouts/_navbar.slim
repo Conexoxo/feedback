@@ -3,9 +3,6 @@ ul.nav.justify-content-end.bg-blue
 		li.nav-item.nav-align
 			= link_to 'Volver al inicio', root_path, class: "nav-item nav-link inicio"
 	- if user_signed_in?
-		- unless request.fullpath=='/cursos'
-			li.nav-item.nav-align
-				= link_to 'Mis cursos', courses_path, class: "nav-item nav-link"
 		- unless current_user.nil?
 			- if is_student?
 				- unless request.fullpath=='/profesores'

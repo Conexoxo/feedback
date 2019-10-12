@@ -10,5 +10,16 @@
   <%= @course.name %>
 </p>
 
+<div class="container mt-3 divider updates mb-3">
+  <%= render @course.comments %>
+</div>
+
+<div class="container bg-white mt-3 mb5 divider">
+  <h3 class='darko pt-2 label-title'>Comentar</h3>
+  <div class="comment-form mt-4 pb-3">
+    <%= render 'comments/form', comment: @comment %>
+  </div>
+</div>
+
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>

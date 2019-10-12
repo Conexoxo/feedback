@@ -4,7 +4,7 @@ class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.json
   def index
-		@courses = Course.all
+		@courses = Course.all.sort
 		@inscritos_count = Course.all.count
 		@impartidos_count = Course.all.count
   end
@@ -12,6 +12,7 @@ class CoursesController < ApplicationController
   # GET /courses/1
   # GET /courses/1.json
   def show
+    @comment = Comment.new
   end
 
   # GET /courses/new

@@ -1,17 +1,9 @@
 <%= form_with(model: comment, local: true) do |form| %>
-<<<<<<< HEAD
   <div class="field" style="color: white;">
     <%= form.text_field :title%>
   </div>
 
   <div class="field" style="color: white;">
-=======
-  <div class="field">
-    <%= form.text_field :title%>
-  </div>
-
-  <div class="field">
->>>>>>> 56d0a17c5bc229ad199dd81940324efeb5a05171
     <%= form.rich_text_area :body%>
   </div>
 

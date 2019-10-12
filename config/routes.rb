@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
-  get 'images/new'
-  get 'home/index'
-  resources :images
-  devise_for :teachers
-  devise_for :student
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-<<<<<<< HEAD
 	root 'welcome#index'
   
   resources :teachers, only: [:index, :show, :update], path: 'profesores', as: 'user', controller: :users do
@@ -24,7 +18,3 @@ Rails.application.routes.draw do
 		sign_up: 'registro', edit: 'editar'
   }
 end
-=======
-root to: "home#index"
-end
->>>>>>> 56d0a17c5bc229ad199dd81940324efeb5a05171

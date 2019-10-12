@@ -3,13 +3,13 @@ Rails.application.routes.draw do
 	root 'welcome#index'
   
   resources :teachers, only: [:index, :show, :update], path: 'profesores', as: 'user', controller: :users do
-		resources :comments, except: :index
+		resources :comments
   end
 
   resources :students, only: [:index, :show], path: 'alumnos', controller: :users
 
   resources :courses, only: [:new, :edit, :index, :show, :update], path:'cursos', path_names: { new: 'crear', edit: 'editar' } do
-    resources :comments, except: :index
+    resources :comments
   end
 
   devise_for :users, path: 'usuario', path_names: {

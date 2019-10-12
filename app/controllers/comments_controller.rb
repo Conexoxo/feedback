@@ -2,16 +2,6 @@ class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
   before_action :set_course
 
-  # GET /comments/new
-  def new
-    @comment = Comment.new
-  end
-
-  # GET /comments/1/edit
-  def edit
-    @comment = @course.comments.find(params[:id])
-  end
-
   # POST /comments
   # POST /comments.json
   def create
@@ -19,6 +9,11 @@ class CommentsController < ApplicationController
     if @comment.save
 			redirect_to @course
 		end
+  end
+
+  # GET /comments/1/edit
+  def edit
+    @comment = @course.comments.find(params[:id])
   end
 
   # PATCH/PUT /comments/1

@@ -7,6 +7,8 @@ class CommentsController < ApplicationController
     @comment = @course.comments.new(params.require(:comment).permit(:comment, :id))
 
     if @comment.save
+      @course.save
+      @comment.save
 			redirect_to @course
     end
     

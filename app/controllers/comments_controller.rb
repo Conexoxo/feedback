@@ -5,21 +5,25 @@ class CommentsController < ApplicationController
   # POST /comments.json
   def create
     @comment = @course.comments.new(params.require(:comment).permit(:comment, :id))
-    
+
     if @comment.save
 			redirect_to @course
-		end
+    end
+    
+    redirect_to @course
   end
 
   # GET /comments/1/edit
   def edit
     @comment = @course.comments.find(params[:id])
+    redirect_to @course
   end
 
   # PATCH/PUT /comments/1
   # PATCH/PUT /comments/1.json
   def update
     @comment = @course.comments.find(params[:id])
+    redirect_to @course
   end
 
   # DELETE /comments/1
@@ -31,6 +35,7 @@ class CommentsController < ApplicationController
       format.html { redirect_to comments_url, notice: 'Comment was successfully destroyed.' }
       format.json { head :no_content }
     end
+    redirect_to @course
   end
 
   private

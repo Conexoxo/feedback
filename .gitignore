@@ -66,9 +66,9 @@ yarn-debug.log*
 #/config/master.key
 
 # Ignore precompiled javascript packs
-/public/packs
-/public/packs-test
-/public/assets
-/node_modules
+#/public/packs
+#/public/packs-test
+#/public/assets
+#/node_modules
 
 .vscode

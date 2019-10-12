@@ -6,20 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(names: 'Luke', movie: movies.first)
 
-User.create email:'profesor@gatica.exe', name:'NombreProfesor', last_name:'Prueba', role:'Profesor', password:'profesor'
+User.create email:'profesor@gatica.exe', name:'Sergio', last_name:'Gatica', role:'Profesor', password:'profesor'
 
 8.times do |i|
   Course.create(nrc: 5000+i, name: "Curso #{i}")
 end
 
 10.times do |i|
-	User.create email:"profesor#{i}@gatica.exe", name:'NombreProfesor', last_name:'Prueba', role:'Profesor', password:'profesor'
+	User.create email:"profesor#{i}@gatica.exe", name:'NombreProfesor', last_name:'ApellidoPrueba', role:'Profesor', password:'profesor'
 end
 
-User.create email:'alumno@gatica.exe', name:'NombreAlumno', last_name:'Prueba', password:'alumno'
+User.create email:'alumno@gatica.exe', name:'Brian', last_name:'Olave', password:'alumno'
 
 30.times do |i|
-	User.create email:"alumno#{i}@gatica.exe", name:'NombreAlumno', last_name:'Prueba', password:'alumno'
+	User.create email:"alumno#{i}@gatica.exe", name:'NombreAlumno', last_name:'ApellidoPrueba', password:'alumno'
 end
 
 ########################################################################################################
@@ -31,7 +31,7 @@ for i in 1..4
   addx=Course.find(i)
   addx.teachers<<i
   add.courses=[1,2,3,4]
-  add.rating=[[6.0, 15],[7.0, 27],[5.0, 25],[6.0, 29],[7.0, 28]]
+  add.rating=[[7.0, 27],[7.0, 28],[6.0, 15],[6.0, 29],[5.0, 25]]
   addx.save!
   add.save!
 end
@@ -39,7 +39,7 @@ end
 for i in 5..8
   add=User.find(i)
   add.courses=[2,4,5,6,8]
-  add.rating=[[1.0, 12],[3.5, 16],[7.0, 13],[3.0, 14],[4.0, 17]]
+  add.rating=[[7.0, 13],[4.0, 17],[3.5, 16],[3.0, 14],[1.0, 12]]
   add.save!
 end
 
@@ -55,7 +55,7 @@ end
 for i in 9..11
   add=User.find(i)
   add.courses=[1,3,6,7,8]
-  add.rating=[[3.0, 21],[7.0, 22],[1.0, 20],[6.0, 24],[1.0, 19]]
+  add.rating=[[7.0, 22],[6.0, 24],[3.0, 21],[1.0, 19],[1.0, 20]]
   add.save!
 end
 

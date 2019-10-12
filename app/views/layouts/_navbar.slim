@@ -8,14 +8,14 @@ ul.nav.justify-content-end.bg-blue
 				- unless request.fullpath=='/profesores'
 					li.nav-item.nav-align
 						= link_to 'Mis profesores', user_index_path, class: "nav-item nav-link"
-				- unless request.fullpath=='/alumnos'
+				- unless request.fullpath==student_path(current_user.id)
 					li.nav-item.nav-align
 						= link_to 'Mi perfil', student_path(current_user.id), class: "nav-item nav-link perfil"
 			- else
 				- unless request.fullpath=='/alumnos'
 					li.nav-item.nav-align
 						= link_to 'Mis alumnos', students_path, class: "nav-item nav-link"
-				- unless request.fullpath=='/profesores'
+				- unless request.fullpath==user_path(current_user.id)
 					li.nav-item.nav-align
 						= link_to 'Mi perfil', user_path(current_user.id), class: "nav-item nav-link perfil"
       	li.nav-item.nav-align

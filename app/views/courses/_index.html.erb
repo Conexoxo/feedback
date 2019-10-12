@@ -1,0 +1,17 @@
+<table class="table table-dark">
+	<thead>
+		<tr>
+			<th scope="col">NRC</th>
+			<th scope="col">Nombre</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @teacher_courses.each do |i, course_nrc, course_name| %>
+			<tr>
+				<td><%= course_nrc %></td>
+				<td><%= course_name %></td>
+				<td><%= link_to 'Ver', course_path(i), class: "btn btn-primary" %></td>
+			</tr>
+		<% end %>
+  </tbody>
+</table>

@@ -1,22 +1,56 @@
-<h1 class="center" style="color:white !important; margin-top: 2rem;">Cursos impartidos</h1>
-<h6 class="center" style="color:white !important;">Total: <%= @impartidos_count %></h6>
+<!-- Mi perfil de Profesor / Cursos impartidos y evaluaciones de ellos -->
+<h1 class="center" style="color:white !important; margin-top: 2rem;"><b style="color:gold">Profesor:</b> <%= @teacher_name %> <%= @teacher_lastname %></h1>
 
-<table class="table table-dark">
-	<thead>
-		<tr>
-			<th scope="col">#</th>
-			<th scope="col">NRC</th>
-			<th scope="col">Nombre</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% @courses.each do |course| %>
-			<tr>
-				<th scope="row"><%= course.id %></th>
-				<td><%= course.nrc %></td>
-				<td><%= course.name %></td>
-				<td><%= link_to 'Ver', course, class: "btn btn-primary" %></td>
-			</tr>
-		<% end %>
-  </tbody>
-</table>
+<div class="card pr-2 pl-2 pt-3 pb-3">
+  <div class="col-md-4">
+    <h3>Correo electrónico</h3>
+  </div>
+  <div class="col-md-8">
+    <div class="card-body">
+      <%= @teacher_email %> 
+    </div>
+  </div>
+</div>
+
+<div class="card pr-2 pl-2 pt-3 pb-3">
+  <div class="col-md-6">
+    <h3>Cursos dictados del período</h3>
+  </div>
+  <div class="col-md-6">
+    <div class="card-body">
+      <u><b>NRC</b> | Nombre curso</u>
+      <br>
+    	<% @teacher_courses.each do |i, course_nrc, course_name| %>
+				<b><%= course_nrc %></b> | <%= course_name %> | <%= link_to 'Ver curso', course_path(i) %>
+        <br>
+			<% end %>
+    </div>
+  </div>
+</div>
+
+<%- if is_student? %>
+  <div class="card pr-2 pl-2 pt-3 mb-5">
+    <div class="col-md-4">
+      <h3>Evaluaciones</h3>
+    </div>
+    <div class="col-md-12">
+      <div class="card-body">
+        <h3 class="score">★ <b style="color:black"><%= @evaluation_avg %> es la evaluación promedio de este profesor</b></h3>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="card pr-2 pl-2 pt-3 mb-5">
+    <div class="col-md-4">
+      <h3>Evaluaciones</h3>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <% @teacher_evaluations.each do |evaluation, user| %>
+          <h3 class="score">★ <b style="color:black"><%= evaluation %> - <%= User.find(user.to_i).email %></b></h3>
+          <br>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>

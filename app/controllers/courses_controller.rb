@@ -1,12 +1,21 @@
 class CoursesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_course, only: [:show, :edit, :update, :destroy]
 
   # GET /courses
   # GET /courses.json
   def index
-		@courses = Course.all.sort
-		@inscritos_count = Course.all.count
-		@impartidos_count = Course.all.count
+		@teacher_courses = []
+    @teacher_courses_array = User.find(current_user.id).courses
+    @teacher_courses_array.each do |i| 
+      @teacher_courses<<[i, Course.find(i).nrc, Course.find(i).name]
+    end
+
+    if is_student?
+      redirect_to student_path(current_user.id)
+    else  
+      redirect_to user_index_path(current_user.id)
+    end
   end
 
   # GET /courses/1

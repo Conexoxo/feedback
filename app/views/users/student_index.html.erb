@@ -1,3 +1,4 @@
+<!-- Mis Profesores / Muestra profesores de los cursos incritos -->
 <div class="container mt-3">
 	<h1 class="center" style="color:white !important; margin-top: 2rem;">Mis profesores</h1>
 
@@ -7,18 +8,14 @@
 				<th scope="col">Nombre</th>
         <th scope="col">Apellido</th>
         <th scope="col">Email</th>
-				<th scope="col">NRC Impartido</th>
-        <th scope="col">Nombre Curso Impartido</th>
 			</tr>
 		</thead>
 		<tbody>
-			<% @users.each do |user| %>
+			<% @teachers.each do |user| %>
 				<tr>
 					<td><%= user.name %></td>
 					<td><%= user.last_name %></td>
 					<td><%= user.email %></td>
-					<td><%= user.last_name %></td>
-					<td><%= user.last_name %></td>
           <td><%= link_to 'Ver', user, class: "btn btn-primary" %></td>
 				</tr>
 			<% end %>

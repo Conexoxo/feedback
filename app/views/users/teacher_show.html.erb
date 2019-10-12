@@ -39,6 +39,16 @@
       </div>
     </div>
   </div>
+  <div class="container mt-3 divider updates mb-3">
+    <%= render @user.comments %>
+  </div>
+
+  <div class="container bg-white mt-3 mb5 divider">
+    <h3 class='darko pt-2 label-title'>Comentar</h3>
+    <div class="comment-form mt-4 pb-3">
+      <%= render 'comments/form', comment: @comment %>
+    </div>
+  </div>
 <% else %>
   <div class="card pr-2 pl-2 pt-3 mb-5">
     <div class="col-md-4">
@@ -48,20 +58,11 @@
       <div class="card-body">
         <% @teacher_evaluations.each do |evaluation, user| %>
           <h3 class="score">★ <b style="color:black"><%= evaluation %> - <%= User.find(user.to_i).email %></b></h3>
-          <br>
         <% end %>
       </div>
     </div>
+    <div class="container divider updates mb-3">
+      <%= render @user.comments %>
+    </div>    
   </div>
 <% end %>
-
-<div class="container mt-3 divider updates mb-3">
-  <%= render @user.comments %>
-</div>
-
-<div class="container bg-white mt-3 mb5 divider">
-  <h3 class='darko pt-2 label-title'>Comentar</h3>
-  <div class="comment-form mt-4 pb-3">
-    <%= render 'comments/form', comment: @comment %>
-  </div>
-</div>

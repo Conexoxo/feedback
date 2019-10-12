@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 	end
 
   def show
+    @comment = Comment.new
     x=0
     suma=0
 		@teacher_courses = []
@@ -49,5 +50,5 @@ class UsersController < ApplicationController
 
 	def set_user
 		@user = User.find(params[:id])
-	end
+  end
 end

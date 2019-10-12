@@ -14,7 +14,7 @@ class CoursesController < ApplicationController
     if is_student?
       redirect_to student_path(current_user.id)
     else  
-      redirect_to user_index_path(current_user.id)
+      redirect_to user_path(current_user.id)
     end
   end
 

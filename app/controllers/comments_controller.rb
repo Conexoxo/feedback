@@ -1,22 +1,38 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_course
-
   # POST /comments
   # POST /comments.json
   def create
-    @comment = @course.comments.new(params.require(:comment).permit(:comment, :id, :user_id))
-    
-    Rails.logger.info @comment.inspect
-		if @comment.save
-			@course.save
+    if params[:course_id].blank?
+      user_comment
+    else
+      course_comment
     end
+  end
 
+  def user_comment
+    Rails.logger.info "Soy un profesor #{params}"
+    @user = User.find(params[:user_id])
+    @comment = @user.comments.new(params.require(:comment).permit(:comment, :id, :user_id))
+    if @comment.save
+      @user.save
+    end
+    redirect_to @user 
+  end
+
+  def course_comment
+    Rails.logger.info "Soy un curso #{params}"
+    @course = Course.find(params[:course_id])
+    @comment = @course.comments.new(params.require(:comment).permit(:comment, :id, :user_id))
+    if @comment.save
+      @course.save
+    end
     redirect_to @course
   end
 
   # GET /comments/1/edit
   def edit
+    @course = Course.find(params[:course_id])
     @comment = @course.comments.find(params[:id])
     redirect_to @course
   end
@@ -24,6 +40,7 @@ class CommentsController < ApplicationController
   # PATCH/PUT /comments/1
   # PATCH/PUT /comments/1.json
   def update
+    @course = Course.find(params[:course_id])
     @comment = @course.comments.find(params[:id])
     redirect_to @course
   end
@@ -31,6 +48,7 @@ class CommentsController < ApplicationController
   # DELETE /comments/1
   # DELETE /comments/1.json
   def destroy
+    @course = Course.find(params[:course_id])
     @comment = @course.comments.find(params[:id])
     @comment.destroy
     respond_to do |format|
@@ -38,11 +56,5 @@ class CommentsController < ApplicationController
       format.json { head :no_content }
     end
     redirect_to @course
-  end
-
-  private
-
-  def set_course
-    @course = Course.find(params[:course_id])
   end
 end

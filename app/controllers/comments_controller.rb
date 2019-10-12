@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-    @comment = @course.comments.new(params.require(:body).permit(:body, :id))
+    @comment = @course.comments.new(params.require(:comment).permit(:comment, :id))
     if @comment.save
 			redirect_to @course
 		end
@@ -45,6 +45,6 @@ class CommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:title, :body)
+      params.require(:comment).permit(:comment)
     end
 end

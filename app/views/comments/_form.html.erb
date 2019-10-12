@@ -1,10 +1,6 @@
-<%= form_with(model: comment, local: true) do |form| %>
-  <div class="field" style="color: white;">
-    <%= form.text_field :title%>
-  </div>
-
-  <div class="field" style="color: white;">
-    <%= form.rich_text_area :body%>
+<%= form_for([@course, @comment]) do |form| %>
+  <div class="field bg-white mt-3">
+    <%= form.rich_text_area :comment %>
   </div>
 
   <div class="actions">

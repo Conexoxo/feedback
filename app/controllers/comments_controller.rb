@@ -1,11 +1,11 @@
 class CommentsController < ApplicationController
-  before_action :set_comment, only: [:show, :edit, :update, :destroy]
   before_action :set_course
 
   # POST /comments
   # POST /comments.json
   def create
     @comment = @course.comments.new(params.require(:comment).permit(:comment, :id))
+    
     if @comment.save
 			redirect_to @course
 		end
@@ -34,12 +34,8 @@ class CommentsController < ApplicationController
   end
 
   private
-    def set_course
-      @course = Course.find(params[:course_id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def comment_params
-      params.require(:comment).permit(:comment)
-    end
+  def set_course
+    @course = Course.find(params[:course_id])
+  end
 end

@@ -1,6 +1,10 @@
 class CommentsController < ApplicationController
   before_action :set_course
 
+  def index
+    @comments = Comment.all
+  end
+
   # POST /comments
   # POST /comments.json
   def create

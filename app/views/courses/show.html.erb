@@ -11,7 +11,7 @@
 </p>
 
 <div class="container mt-3 divider updates mb-3">
-  <%= render @course.comments %>
+  <%= render @course.comments.order("created_at ASC") %>
 </div>
 
 <div class="container bg-white mt-3 mb5 divider">

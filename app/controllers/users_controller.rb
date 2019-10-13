@@ -16,6 +16,7 @@ class UsersController < ApplicationController
 
   def show
     @comment = Comment.new
+    @teacher_comment = TeacherComment.new
     x=0
     suma=0
 		@teacher_courses = []

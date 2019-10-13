@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :comments, dependent: :destroy
+  has_many :teacher_comments, dependent: :destroy
 
   validates_uniqueness_of :id, :email
 end

@@ -29,7 +29,7 @@
 </div>
 
 <%- if is_student? %>
-  <div class="card pr-2 pl-2 pt-3 mb-5">
+  <div class="card pr-2 pl-2 pt-3">
     <div class="col-md-4">
       <h3>Evaluaciones</h3>
     </div>
@@ -38,15 +38,15 @@
         <h3 class="score">★ <b style="color:black"><%= @evaluation_avg %> es la evaluación promedio de este profesor</b></h3>
       </div>
     </div>
-  </div>
-  <div class="container mt-3 divider updates mb-3">
-    <%= render @user.comments %>
+    <div class="container divider mb-3">
+      <%= render @user.teacher_comments %>
+    </div>
   </div>
 
   <div class="container bg-white mt-3 mb5 divider">
     <h3 class='darko pt-2 label-title'>Comentar</h3>
     <div class="comment-form mt-4 pb-3">
-      <%= render 'comments/form', comment: @comment %>
+      <%= render 'teacher_comments/form', teacher_comment: @teacher_comment %>
     </div>
   </div>
 <% else %>
@@ -54,15 +54,15 @@
     <div class="col-md-4">
       <h3>Evaluaciones</h3>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-12">
       <div class="card-body">
         <% @teacher_evaluations.each do |evaluation, user| %>
           <h3 class="score">★ <b style="color:black"><%= evaluation %> - <%= User.find(user.to_i).email %></b></h3>
         <% end %>
       </div>
     </div>
-    <div class="container divider updates mb-3">
-      <%= render @user.comments %>
+    <div class="container divider mb-3">
+      <%= render @user.teacher_comments %>
     </div>    
   </div>
 <% end %>

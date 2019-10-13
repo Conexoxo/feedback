@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 	root 'welcome#index'
   
   resources :teachers, only: [:index, :show, :update], path: 'profesores', as: 'user', controller: :users do
-		resources :comments
+		resources :teacher_comments
   end
 
   resources :students, only: [:index, :show], path: 'alumnos', controller: :users

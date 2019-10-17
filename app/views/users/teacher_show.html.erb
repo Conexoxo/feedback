@@ -1,6 +1,8 @@
 <!-- Mi perfil de Profesor / Cursos impartidos y evaluaciones de ellos -->
 <h1 class="center" style="color:white !important; margin-top: 2rem;"><b style="color:gold">Profesor:</b> <%= @teacher_name %> <%= @teacher_lastname %></h1>
 
+<%= link_to "Volver", user_index_path, class:"btn btn-warning mb-3" %> 
+
 <div class="card pr-2 pl-2 pt-3 pb-3">
   <div class="col-md-4">
     <h3>Correo electrónico</h3>
@@ -44,7 +46,7 @@
   </div>
 
   <div class="container bg-white mt-3 mb-5 divider">
-    <h3 class='darko pt-2 label-title'>Comentar</h3>
+    <h3 class='label-title'>Evaluar</h3>
     <div class="comment-form mt-4 pb-3">
       <%= render 'teacher_comments/form', teacher_comment: @teacher_comment %>
     </div>

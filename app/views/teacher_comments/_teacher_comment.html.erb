@@ -2,6 +2,6 @@
 	<div class="card-body">
 		<h5><%= User.find(teacher_comment.user_id).name %></h5>
 		<%= teacher_comment.teacher_comment %>
-		<small> El <%= User.find(teacher_comment.user_id).role %> comentó el <%= teacher_comment.created_at.strftime("%m/%d/%Y a las %H:%M") %></small>
+		<small> El <%= User.find(teacher_comment.user_id).role %> evaluó el <%= teacher_comment.created_at.strftime("%m/%d/%Y a las %H:%M") %></small>
 	</div>
 </div>

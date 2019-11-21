@@ -68,26 +68,26 @@ ICF244 Arquitectura de Sistemas - Tarea 1 y 2: Comunidad UNAB
 
 ## Known Issues 📢
 1) To fix **"Error installing pg: ERROR: Failed to build gem native extension."** :
-  ```Fix
-  sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev postgresql-client-common postgresql-client libpq-dev
-  ```
+    ```Fix
+    sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev postgresql-client-common postgresql-client libpq-dev
+    ```
 
 2) To fix **"PG::ConnectionBad (could not connect to server: No such file or directory Is the server running locally and accepting connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?):"** :
-  ```Fix
-    sudo service postgresql start
-  ```
+    ```Fix
+      sudo service postgresql start
+    ```
 
 3) To fix **"Webpacker::Manifest::MissingEntryError - Webpacker can't find application in /feedback/public/packs/manifest.json"** and **"[Webpacker] Compilation failed: web_1  | /usr/local/bundle/gems/webpacker-4.0.7/lib/webpacker/runner.rb:13:in `': No such file or directory - yarn (Errno::ENOENT) web_1  |     from /usr/local/bundle/gems/webpacker-4.0.7/lib/webpacker runner.rb:13:in"** :
-  ```Fix
-    bundle exec rake assets:precompile
-    docker-compose build
-    docker-compose up
-  ```
+    ```Fix
+      bundle exec rake assets:precompile
+      docker-compose build
+      docker-compose up
+    ```
 
 4) To fix **"Could not find a JavaScript runtime. See https://github.com/rails/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)"**
-  ```Fix
-    sudo apt-get install nodejs
-  ```
+    ```Fix
+      sudo apt-get install nodejs
+    ```
 
 ## Authors ✒️
 * **Pedro Conejera** - *2019* - [PedroConejera](https://github.com/PedroConejera)

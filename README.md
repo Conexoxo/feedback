@@ -72,7 +72,7 @@ ICF244 Arquitectura de Sistemas - Tarea 1 y 2: Comunidad UNAB
   sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev postgresql-client-common postgresql-client libpq-dev
   ```
 
-2) To fix **"Cannot start service db: driver failed programming external connectivity on endpoint feedback_db_1 (): Error starting userland proxy: listen tcp 0.0.0.0:5432: bind: address already in use"** :
+2) To fix **"PG::ConnectionBad (could not connect to server: No such file or directory Is the server running locally and accepting connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?):"** :
   ```Fix
     sudo service postgresql start
   ```

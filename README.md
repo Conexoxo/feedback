@@ -1,5 +1,5 @@
 # Plataforma para realizar feedback a profesores
-ICF244 Arquitectura de Sistemas - Tarea 1: Comunidad UNAB
+ICF244 Arquitectura de Sistemas - Tarea 1 y 2: Comunidad UNAB
 
 [Demo en Heroku >>](https://feedback-produc.herokuapp.com/)
 
